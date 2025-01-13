@@ -1,0 +1,739 @@
+{
+	"info": {
+		"_postman_id": "a9a21b3e-e5ee-4235-b304-22584ff377d2",
+		"name": "Intelligent API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "937300",
+		"_collection_link": "https://mobiledevza.postman.co/workspace/9743a2d2-19a2-417b-864a-cb9ab2012b9b/collection/937300-a9a21b3e-e5ee-4235-b304-22584ff377d2?action=share&source=collection_link&creator=937300"
+	},
+	"item": [
+		{
+			"name": "Document",
+			"item": [
+				{
+					"name": "01 Expenses",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Correlation-Id",
+								"value": "dfe8e127-14aa-42e5-8397-118ebd4594b3",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "X-Forwarded-For",
+								"value": "156.155.140.26",
+								"type": "text"
+							},
+							{
+								"key": "CF-IPCountry",
+								"value": "ZA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "file",
+							"file": {
+								"src": ""
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}v1/document/expenses",
+							"host": [
+								"{{baseUrl}}v1"
+							],
+							"path": [
+								"document",
+								"expenses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "02 Detect Text",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Correlation-Id",
+								"value": "dfe8e127-14aa-42e5-8397-118ebd4594b3",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "X-Forwarded-For",
+								"value": "156.155.140.26",
+								"type": "text"
+							},
+							{
+								"key": "CF-IPCountry",
+								"value": "ZA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "file",
+							"file": {
+								"src": ""
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}v1/document/text",
+							"host": [
+								"{{baseUrl}}v1"
+							],
+							"path": [
+								"document",
+								"text"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "03 Identity",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Correlation-Id",
+								"value": "dfe8e127-14aa-42e5-8397-118ebd4594b3",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "X-Forwarded-For",
+								"value": "156.155.140.26",
+								"type": "text"
+							},
+							{
+								"key": "CF-IPCountry",
+								"value": "ZA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "file",
+							"file": {
+								"src": ""
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}v1/document/identity",
+							"host": [
+								"{{baseUrl}}v1"
+							],
+							"path": [
+								"document",
+								"identity"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "04 Detect Text and Summarize",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Correlation-Id",
+								"value": "dfe8e127-14aa-42e5-8397-118ebd4594b3",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "X-Forwarded-For",
+								"value": "156.155.140.26",
+								"type": "text"
+							},
+							{
+								"key": "CF-IPCountry",
+								"value": "ZA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "file",
+							"file": {
+								"src": ""
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}v1/document/text/summarize",
+							"host": [
+								"{{baseUrl}}v1"
+							],
+							"path": [
+								"document",
+								"text",
+								"summarize"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Document Optical Character Recognition (OCR)"
+		},
+		{
+			"name": "Language",
+			"item": [
+				{
+					"name": "01 Supported Languages",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}v1/language/translate/supportedlanguages",
+							"host": [
+								"{{baseUrl}}v1"
+							],
+							"path": [
+								"language",
+								"translate",
+								"supportedlanguages"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "02 Detect Language",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Correlation-Id",
+								"value": "dfe8e127-14aa-42e5-8397-118ebd4594b3",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "X-Forwarded-For",
+								"value": "156.155.140.26",
+								"type": "text"
+							},
+							{
+								"key": "CF-IPCountry",
+								"value": "ZA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"text\": \"Il était une fois un fermier nommé Henry qui plantait des citrouilles pour s'amuser, mais ses citrouilles ne poussaient pas, elles se ratatinaient et mouraient. Henry devait comprendre ce qui n'allait pas, alors il demanda à son ami George. George comprit qu'il ne pourrait aider Henry que s'il voyait réellement ce qu'il avait fait, alors il prit rendez-vous pour aller à la ferme d'Henry et voir ses citrouilles. Lorsque le moment convenu approcha, George se rendit à la ferme d'Henry et alla voir la plantation de citrouilles, pour découvrir qu'Henry avait essayé de faire pousser les graines dans de l'eau seulement. George expliqua à Henry que cela ne marcherait jamais, et Henry écouta George et planta de nouvelles graines de citrouilles dans la boue, les arrosa et elles poussèrent. There once was a farmer named Henry who planted pumpkins for fun, but his pumkins didn't grow instead they shrivelled up and died. Henry had to figure out what was wrong, so he asked his friend George. George realised he could only help Henry if he actually saw what he had done, so he arranged a time to go over to Henry's farm and check out his pumpkins. When the arranged time approached, George went over to Henry's farm and went to see the pumpkin plantation, only to find that Henry had been trying to grow the seeds in just water. George explained to Henry that would never work, and Henry listened to George and planted new pumkin seeds in mud, watered them and they grew.\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}v1/language/detect",
+							"host": [
+								"{{baseUrl}}v1"
+							],
+							"path": [
+								"language",
+								"detect"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "03 Translate",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Correlation-Id",
+								"value": "dfe8e127-14aa-42e5-8397-118ebd4594b3",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "X-Forwarded-For",
+								"value": "156.155.140.26",
+								"type": "text"
+							},
+							{
+								"key": "CF-IPCountry",
+								"value": "ZA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"text\": \"Il était une fois un fermier nommé Henry qui plantait des citrouilles pour s'amuser, mais ses citrouilles ne poussaient pas, elles se ratatinaient et mouraient. Henry devait comprendre ce qui n'allait pas, alors il demanda à son ami George. George comprit qu'il ne pourrait aider Henry que s'il voyait réellement ce qu'il avait fait, alors il prit rendez-vous pour aller à la ferme d'Henry et voir ses citrouilles. Lorsque le moment convenu approcha, George se rendit à la ferme d'Henry et alla voir la plantation de citrouilles, pour découvrir qu'Henry avait essayé de faire pousser les graines dans de l'eau seulement. George expliqua à Henry que cela ne marcherait jamais, et Henry écouta George et planta de nouvelles graines de citrouilles dans la boue, les arrosa et elles poussèrent.\",\n    \"sourceLanguage\": \"auto\",\n    \"targetLanguage\": \"en\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}v1/language/translate",
+							"host": [
+								"{{baseUrl}}v1"
+							],
+							"path": [
+								"language",
+								"translate"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Pii",
+			"item": [
+				{
+					"name": "01 Supported Languages",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}v1/pii/supportedlanguages",
+							"host": [
+								"{{baseUrl}}v1"
+							],
+							"path": [
+								"pii",
+								"supportedlanguages"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "02 Detect Pii",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Correlation-Id",
+								"value": "dfe8e127-14aa-42e5-8397-118ebd4594b3",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "X-Forwarded-For",
+								"value": "156.155.140.26",
+								"type": "text"
+							},
+							{
+								"key": "CF-IPCountry",
+								"value": "ZA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"text\": \"Hello, my name is Johnathan Doe and I am a software developer that lives in Cape Town, South Africa. People normally call me John because it's easier then saying Johnathan. For fun I write code, exercise and run. I also like hiking and exploring new locations. Please call me on 0825556789 if you need assistance.\",\n    \"language\": \"en\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}v1/pii/detect",
+							"host": [
+								"{{baseUrl}}v1"
+							],
+							"path": [
+								"pii",
+								"detect"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "03 Redact Pii",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Correlation-Id",
+								"value": "dfe8e127-14aa-42e5-8397-118ebd4594b3",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "X-Forwarded-For",
+								"value": "156.155.140.26",
+								"type": "text"
+							},
+							{
+								"key": "CF-IPCountry",
+								"value": "ZA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"text\": \"Hello, my name is Johnathan Doe and I am a software developer that lives in Cape Town, South Africa. People normally call me John because it's easier then saying Johnathan. For fun I write code, exercise and run. I also like hiking and exploring new locations. Please call me on 0825556789 if you need assistance.\",\n    \"language\": \"en\",\n    \"minimumScore\": 0.75\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}v1/pii/redact",
+							"host": [
+								"{{baseUrl}}v1"
+							],
+							"path": [
+								"pii",
+								"redact"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Text",
+			"item": [
+				{
+					"name": "Sentiment",
+					"item": [
+						{
+							"name": "01 Supported Languages",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}v1/text/sentiment/supportedlanguages",
+									"host": [
+										"{{baseUrl}}v1"
+									],
+									"path": [
+										"text",
+										"sentiment",
+										"supportedlanguages"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "02 Detect Sentiment",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "X-Correlation-Id",
+										"value": "dfe8e127-14aa-42e5-8397-118ebd4594b3",
+										"type": "text",
+										"disabled": true
+									},
+									{
+										"key": "X-Forwarded-For",
+										"value": "156.155.140.26",
+										"type": "text"
+									},
+									{
+										"key": "CF-IPCountry",
+										"value": "ZA",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"text\": \"Hello, my name is Johnathan Doe and I am a software developer that lives in Cape Town, South Africa. People normally call me John because it's easier then saying Johnathan. For fun I write code, exercise and run. I also like hiking and exploring new locations. Please call me on 0825556789 if you need assistance.\",\n    \"language\": \"en\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}v1/text/sentiment",
+									"host": [
+										"{{baseUrl}}v1"
+									],
+									"path": [
+										"text",
+										"sentiment"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "01 Summarize Text",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Correlation-Id",
+								"value": "dfe8e127-14aa-42e5-8397-118ebd4594b3",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "X-Forwarded-For",
+								"value": "156.155.140.26",
+								"type": "text"
+							},
+							{
+								"key": "CF-IPCountry",
+								"value": "ZA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"text\": \"Hello, my name is Johnathan Doe and I am a software developer that lives in Cape Town, South Africa. People normally call me John because it's easier then saying Johnathan. For fun I write code, exercise and run. I also like hiking and exploring new locations. Please call me on 0825556789 if you need assistance.\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}v1/text/summarize",
+							"host": [
+								"{{baseUrl}}v1"
+							],
+							"path": [
+								"text",
+								"summarize"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "01 Scopes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}v1/scopes",
+					"host": [
+						"{{baseUrl}}v1"
+					],
+					"path": [
+						"scopes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "02 Request Token",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"postman.setEnvironmentVariable(\"token\", jsonData.access_token);"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"client_id\": \"{{clientId}}\",\n    \"client_secret\": \"{{clientSecret}}\",\n    \"grant_type\": \"client_credentials\",\n    \"scope\": \"client.balance document.expense document.text document.identity language.detect language.translate pii.detect pii.redact text.sentiment text.summarize\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}v1/token",
+					"host": [
+						"{{baseUrl}}v1"
+					],
+					"path": [
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "03 Client Balance",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}v1/client/balance",
+					"host": [
+						"{{baseUrl}}v1"
+					],
+					"path": [
+						"client",
+						"balance"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
