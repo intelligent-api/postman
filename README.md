@@ -22,7 +22,9 @@
 3. Ensure you select the `intelligent-api` enviroment on the far top right drop down before starting to use the collection.
 4. Once the collection has been imported and the environment has been selected, you should be able to begin by generating a `token` that you can use for subsequent API calls, to do this invoke the `02 Request Token` endpoint in the root of the `Intelligent API` collection.
 
-> NB: When generating a token, you will only be able to specify `scopes` that the credentials you generated were granted access to when you creating them in the https://dash.intelligent-api.com dashboard. So for example if you created credentials and unticked some of the scopes, you cannot include those scopes when requesting a token.
+> NB: When generating a token, you will only be able to specify `scopes` that the credentials you generated were granted access to when you created them in the https://dash.intelligent-api.com dashboard. So for example if you created credentials and unticked some of the scopes, you cannot include those scopes when requesting a token and subsequently can also not invoke any endpoints that require those scopes.
+
+> For more information on the Scopes and which endpoints require which Scopes, please see https://dash.intelligent-api.com/platform/apiaccess#scopes.
 
 5. This method will generate a token and place it into your environment variables for use with the rest of the endpoints, so once you have generated a token you will be able to invoke all the API endpoints the token has relevant scope to invoke for 4 hours before needing to generate a new token.
 6. Once a token has been generated, you can invoke the remaining API endpoints as you wish.
@@ -36,5 +38,7 @@
 4. Once the collection has been imported and the environment has been selected, you should be able to invoke any of the API endpoints.
 
 > NB: When using `Basic Credentials`, you will only be able to invoke endpoints that the credentials were granted access to when you creating them in the https://dash.intelligent-api.com dashboard. So for example if you created credentials and unticked some of the scopes, you cannot invoke endpoints that require those scopes.
+
+> For more information on the Scopes and which endpoints require which Scopes, please see https://dash.intelligent-api.com/platform/apiaccess#scopes.
 
 5. The `Document` endpoints all require files as input, and to send a file to the endpoint simply select the `Body` tab, then select `binary` for the format and use the `Select File` input to browse for and select an appropriate file.
