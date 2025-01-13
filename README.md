@@ -27,17 +27,16 @@
 > For more information on the Scopes and which endpoints require which Scopes, please see https://dash.intelligent-api.com/platform/apiaccess#scopes.
 
 5. This method will generate a token and place it into your environment variables for use with the rest of the endpoints, so once you have generated a token you will be able to invoke all the API endpoints the token has relevant scope to invoke for 4 hours before needing to generate a new token.
-6. Once a token has been generated, you can invoke the remaining API endpoints as you wish.
-7. The `Document` endpoints all require files as input, and to send a file to the endpoint simply select the `Body` tab, then select `binary` for the format and use the `Select File` input to browse for and select an appropriate file.
+6. The `Document` endpoints all require files as input, and to send a file to the endpoint simply select the `Body` tab, then select `binary` for the format and use the `Select File` input to browse for and select an appropriate file.
 
 ### Using the Basic Auth Collection
 
 1. If you have setup Basic Credentials in Step 1 of the _Environment Variables Setup_ you will need to navigate back to `Collections` in Postman and then select `Import` again, and this time import the `Intelligent API - Basic Auth.postman_collection.json` collection.
-2. Once the collection has been imported, you will see the `Intelligent API` collection in your list of Postman collections.
+2. Once the collection has been imported, you will see the `Intelligent API - Basic Auth` collection in your list of Postman collections.
 3. Ensure you select the `intelligent-api` enviroment on the far top right drop down before starting to use the collection.
 4. Once the collection has been imported and the environment has been selected, you should be able to invoke any of the API endpoints.
 
-> NB: When using `Basic Credentials`, you will only be able to invoke endpoints that the credentials were granted access to when you creating them in the https://dash.intelligent-api.com dashboard. So for example if you created credentials and unticked some of the scopes, you cannot invoke endpoints that require those scopes.
+> NB: When using `Basic Credentials`, you will only be able to invoke endpoints that the credentials were granted access to when you created them in the https://dash.intelligent-api.com dashboard. So for example if you created credentials and unticked some of the scopes, you cannot invoke endpoints that require those scopes.
 
 > For more information on the Scopes and which endpoints require which Scopes, please see https://dash.intelligent-api.com/platform/apiaccess#scopes.
 
