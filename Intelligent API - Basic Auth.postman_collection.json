@@ -4,7 +4,7 @@
 		"name": "Intelligent API - Basic Auth",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "937300",
-		"_collection_link": "https://mobiledevza.postman.co/workspace/9743a2d2-19a2-417b-864a-cb9ab2012b9b/collection/937300-d1b467db-7edf-416e-acdf-9eaa3ce6ed29?action=share&source=collection_link&creator=937300"
+		"_collection_link": "https://mobiledevza.postman.co/workspace/Team-Workspace~9743a2d2-19a2-417b-864a-cb9ab2012b9b/collection/937300-d1b467db-7edf-416e-acdf-9eaa3ce6ed29?action=share&source=collection_link&creator=937300"
 	},
 	"item": [
 		{
@@ -35,16 +35,6 @@
 								"value": "dfe8e127-14aa-42e5-8397-118ebd4594b3",
 								"type": "text",
 								"disabled": true
-							},
-							{
-								"key": "X-Forwarded-For",
-								"value": "156.155.140.26",
-								"type": "text"
-							},
-							{
-								"key": "CF-IPCountry",
-								"value": "ZA",
-								"type": "text"
 							}
 						],
 						"body": {
@@ -91,16 +81,6 @@
 								"value": "dfe8e127-14aa-42e5-8397-118ebd4594b3",
 								"type": "text",
 								"disabled": true
-							},
-							{
-								"key": "X-Forwarded-For",
-								"value": "156.155.140.26",
-								"type": "text"
-							},
-							{
-								"key": "CF-IPCountry",
-								"value": "ZA",
-								"type": "text"
 							}
 						],
 						"body": {
@@ -147,16 +127,6 @@
 								"value": "dfe8e127-14aa-42e5-8397-118ebd4594b3",
 								"type": "text",
 								"disabled": true
-							},
-							{
-								"key": "X-Forwarded-For",
-								"value": "156.155.140.26",
-								"type": "text"
-							},
-							{
-								"key": "CF-IPCountry",
-								"value": "ZA",
-								"type": "text"
 							}
 						],
 						"body": {
@@ -179,7 +149,57 @@
 					"response": []
 				},
 				{
-					"name": "04 Detect Text and Summarize",
+					"name": "04 Identity Field Names",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{basicAuthClientSecret}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{basicAuthClientId}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-Correlation-Id",
+								"value": "dfe8e127-14aa-42e5-8397-118ebd4594b3",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "file",
+							"file": {
+								"src": ""
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}v1/document/identity/fieldnames",
+							"host": [
+								"{{baseUrl}}v1"
+							],
+							"path": [
+								"document",
+								"identity",
+								"fieldnames"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "05 Detect Text and Summarize",
 					"request": {
 						"auth": {
 							"type": "basic",
@@ -203,16 +223,6 @@
 								"value": "dfe8e127-14aa-42e5-8397-118ebd4594b3",
 								"type": "text",
 								"disabled": true
-							},
-							{
-								"key": "X-Forwarded-For",
-								"value": "156.155.140.26",
-								"type": "text"
-							},
-							{
-								"key": "CF-IPCountry",
-								"value": "ZA",
-								"type": "text"
 							}
 						],
 						"body": {
@@ -300,16 +310,6 @@
 								"value": "dfe8e127-14aa-42e5-8397-118ebd4594b3",
 								"type": "text",
 								"disabled": true
-							},
-							{
-								"key": "X-Forwarded-For",
-								"value": "156.155.140.26",
-								"type": "text"
-							},
-							{
-								"key": "CF-IPCountry",
-								"value": "ZA",
-								"type": "text"
 							}
 						],
 						"body": {
@@ -359,16 +359,6 @@
 								"value": "dfe8e127-14aa-42e5-8397-118ebd4594b3",
 								"type": "text",
 								"disabled": true
-							},
-							{
-								"key": "X-Forwarded-For",
-								"value": "156.155.140.26",
-								"type": "text"
-							},
-							{
-								"key": "CF-IPCountry",
-								"value": "ZA",
-								"type": "text"
 							}
 						],
 						"body": {
@@ -456,16 +446,6 @@
 								"value": "dfe8e127-14aa-42e5-8397-118ebd4594b3",
 								"type": "text",
 								"disabled": true
-							},
-							{
-								"key": "X-Forwarded-For",
-								"value": "156.155.140.26",
-								"type": "text"
-							},
-							{
-								"key": "CF-IPCountry",
-								"value": "ZA",
-								"type": "text"
 							}
 						],
 						"body": {
@@ -515,16 +495,6 @@
 								"value": "dfe8e127-14aa-42e5-8397-118ebd4594b3",
 								"type": "text",
 								"disabled": true
-							},
-							{
-								"key": "X-Forwarded-For",
-								"value": "156.155.140.26",
-								"type": "text"
-							},
-							{
-								"key": "CF-IPCountry",
-								"value": "ZA",
-								"type": "text"
 							}
 						],
 						"body": {
@@ -616,16 +586,6 @@
 										"value": "dfe8e127-14aa-42e5-8397-118ebd4594b3",
 										"type": "text",
 										"disabled": true
-									},
-									{
-										"key": "X-Forwarded-For",
-										"value": "156.155.140.26",
-										"type": "text"
-									},
-									{
-										"key": "CF-IPCountry",
-										"value": "ZA",
-										"type": "text"
 									}
 								],
 								"body": {
@@ -677,16 +637,6 @@
 								"value": "dfe8e127-14aa-42e5-8397-118ebd4594b3",
 								"type": "text",
 								"disabled": true
-							},
-							{
-								"key": "X-Forwarded-For",
-								"value": "156.155.140.26",
-								"type": "text"
-							},
-							{
-								"key": "CF-IPCountry",
-								"value": "ZA",
-								"type": "text"
 							}
 						],
 						"body": {
