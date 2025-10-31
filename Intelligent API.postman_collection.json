@@ -594,6 +594,85 @@
 			]
 		},
 		{
+			"name": "Scraper",
+			"item": [
+				{
+					"name": "01 Markdown Web Page",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"url\": \"https://fullcycle.tech\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}v1/scraper/markdown",
+							"host": [
+								"{{baseUrl}}v1"
+							],
+							"path": [
+								"scraper",
+								"markdown"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "02 Summarize Web Page",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"url\": \"https://fullcycle.tech\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}v1/scraper/summarize",
+							"host": [
+								"{{baseUrl}}v1"
+							],
+							"path": [
+								"scraper",
+								"summarize"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
 			"name": "01 Scopes",
 			"request": {
 				"method": "GET",
@@ -633,7 +712,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"client_id\": \"{{clientId}}\",\n    \"client_secret\": \"{{clientSecret}}\",\n    \"grant_type\": \"client_credentials\",\n    \"scope\": \"client.balance document.expense document.text document.identity language.detect language.translate pii.detect pii.redact text.sentiment text.summarize\"\n}",
+					"raw": "{\n    \"client_id\": \"{{clientId}}\",\n    \"client_secret\": \"{{clientSecret}}\",\n    \"grant_type\": \"client_credentials\",\n    \"scope\": \"client.balance document.expense document.text document.identity language.detect language.translate pii.detect pii.redact scraper.markdown text.sentiment text.summarize\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
