@@ -757,6 +757,91 @@
             }
           },
           "response": []
+        },
+        {
+          "name": "03 Image Calorie Counter",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "{{basicAuthClientSecret}}",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "{{basicAuthClientId}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "X-Correlation-Id",
+                "value": "dfe8e127-14aa-42e5-8397-118ebd4594b3",
+                "type": "text",
+                "disabled": true
+              }
+            ],
+            "body": {
+              "mode": "file",
+              "file": {
+                "src": "foodpic.jpg"
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}v1/image/calories",
+              "host": ["{{baseUrl}}v1"],
+              "path": ["image", "calories"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "04 Text Calorie Counter",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "{{basicAuthClientSecret}}",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "{{basicAuthClientId}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "X-Correlation-Id",
+                "value": "dfe8e127-14aa-42e5-8397-118ebd4594b3",
+                "type": "text",
+                "disabled": true
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"text\": \"3 friend eggs and 2 pieces of bacon\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}v1/text/calories",
+              "host": ["{{baseUrl}}v1"],
+              "path": ["text", "calories"]
+            }
+          },
+          "response": []
         }
       ]
     },
