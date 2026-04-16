@@ -742,6 +742,45 @@
             }
           },
           "response": []
+        },
+        {
+          "name": "05 Text Classify",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "X-Correlation-Id",
+                "value": "dfe8e127-14aa-42e5-8397-118ebd4594b3",
+                "type": "text",
+                "disabled": true
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"text\": \"Eggs\",\n    \"classifications\": [\"Food\", \"Drink\", \"Other\"]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}v1/text/classify",
+              "host": ["{{baseUrl}}v1"],
+              "path": ["text", "classify"]
+            }
+          },
+          "response": []
         }
       ]
     },
@@ -782,7 +821,7 @@
         "header": [],
         "body": {
           "mode": "raw",
-          "raw": "{\n    \"client_id\": \"{{clientId}}\",\n    \"client_secret\": \"{{clientSecret}}\",\n    \"grant_type\": \"client_credentials\",\n    \"scope\": \"client.balance document.expense document.text document.identity language.detect language.translate pii.detect pii.redact scraper.markdown text.sentiment text.summarize image.list speech.transcribe image.calories text.calories\"\n}",
+          "raw": "{\n    \"client_id\": \"{{clientId}}\",\n    \"client_secret\": \"{{clientSecret}}\",\n    \"grant_type\": \"client_credentials\",\n    \"scope\": \"client.balance document.expense document.text document.identity language.detect language.translate pii.detect pii.redact scraper.markdown text.sentiment text.summarize image.list speech.transcribe image.calories text.calories text.classify\"\n}",
           "options": {
             "raw": {
               "language": "json"

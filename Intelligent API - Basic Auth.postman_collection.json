@@ -842,6 +842,50 @@
             }
           },
           "response": []
+        },
+        {
+          "name": "05 Text Classify",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "{{basicAuthClientSecret}}",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "{{basicAuthClientId}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "X-Correlation-Id",
+                "value": "dfe8e127-14aa-42e5-8397-118ebd4594b3",
+                "type": "text",
+                "disabled": true
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"text\": \"Eggs\",\n    \"classifications\": [\"Food\", \"Drink\", \"Other\"]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}v1/text/classify",
+              "host": ["{{baseUrl}}v1"],
+              "path": ["text", "classify"]
+            }
+          },
+          "response": []
         }
       ]
     },
