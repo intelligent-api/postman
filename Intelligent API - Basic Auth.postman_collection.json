@@ -886,6 +886,94 @@
             }
           },
           "response": []
+        },
+        {
+          "name": "06 Text Classify Multiple",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "{{basicAuthClientSecret}}",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "{{basicAuthClientId}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "X-Correlation-Id",
+                "value": "dfe8e127-14aa-42e5-8397-118ebd4594b3",
+                "type": "text",
+                "disabled": true
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"items\": [\"McDonalds Quarter Pounder deluxe\",\n\"McDonalds Regular Coke\",\n\"Gym Membership\",\n\"Beef Steak\",\n\"Multi-vitamin\",\n\"Petrol\",\n\"Car tires\"],\n  \"classifications\": [\"Food & Dining\", \"Transport\", \"Shopping\", \"Utilities\", \"Entertainment\", \"Health\", \"Education\", \"Other\"]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}v1/text/classify/multiple",
+              "host": ["{{baseUrl}}v1"],
+              "path": ["text", "classify", "multiple"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "07 Text Expenses",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "{{basicAuthClientSecret}}",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "{{basicAuthClientId}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "X-Correlation-Id",
+                "value": "dfe8e127-14aa-42e5-8397-118ebd4594b3",
+                "type": "text",
+                "disabled": true
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"text\": \"59.99 for bananas\",\n  \"classifications\": [\"Food & Dining\", \"Transport\", \"Shopping\", \"Utilities\", \"Entertainment\", \"Health\", \"Education\", \"Other\"]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}v1/text/expenses",
+              "host": ["{{baseUrl}}v1"],
+              "path": ["text", "expenses"]
+            }
+          },
+          "response": []
         }
       ]
     },
