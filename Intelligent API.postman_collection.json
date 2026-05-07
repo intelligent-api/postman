@@ -859,6 +859,188 @@
             }
           },
           "response": []
+        },
+        {
+          "name": "08 Text Todos",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "X-Correlation-Id",
+                "value": "dfe8e127-14aa-42e5-8397-118ebd4594b3",
+                "type": "text",
+                "disabled": true
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"usersDate\": \"05/05/2026\",\n  \"usersDay\": \"Tuesday\",\n  \"usersTime\": \"4:13 PM\",\n  \"text\": \"Pick up the car tomorrow evening\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}v1/text/todo",
+              "host": ["{{baseUrl}}v1"],
+              "path": ["text", "todo"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "09 Transcribe Todo",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "X-Correlation-Id",
+                "value": "dfe8e127-14aa-42e5-8397-118ebd4594b3",
+                "type": "text",
+                "disabled": true
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "file",
+                  "type": "file",
+                  "uuid": "b2c8c100-82ea-4944-ac5e-761f7d49586d",
+                  "src": "audiofile.ogg"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{baseUrl}}v1/speech/todo?user_date=05/05/2026&user_day=Tuesday&user_time=10:15 AM",
+              "host": ["{{baseUrl}}v1"],
+              "path": ["speech", "todo"],
+              "query": [
+                {
+                  "key": "user_date",
+                  "value": "05/05/2026"
+                },
+                {
+                  "key": "user_day",
+                  "value": "Tuesday"
+                },
+                {
+                  "key": "user_time",
+                  "value": "10:15 AM"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "10 Transcribe Calories",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "X-Correlation-Id",
+                "value": "dfe8e127-14aa-42e5-8397-118ebd4594b3",
+                "type": "text",
+                "disabled": true
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "file",
+                  "type": "file",
+                  "uuid": "b2c8c100-82ea-4944-ac5e-761f7d49586d",
+                  "src": "audiofile.ogg"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{baseUrl}}v1/speech/calories",
+              "host": ["{{baseUrl}}v1"],
+              "path": ["speech", "calories"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "11 Transcribe Expenses",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "X-Correlation-Id",
+                "value": "dfe8e127-14aa-42e5-8397-118ebd4594b3",
+                "type": "text",
+                "disabled": true
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "file",
+                  "type": "file",
+                  "uuid": "b2c8c100-82ea-4944-ac5e-761f7d49586d",
+                  "src": "audiofile.ogg"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{baseUrl}}v1/speech/expenses?classifications=Food%20%26%20Dining,Transport,Shopping,Utilities,Entertainment,Health,Education,Other",
+              "host": ["{{baseUrl}}v1"],
+              "path": ["speech", "expenses"],
+              "query": [
+                {
+                  "key": "classifications",
+                  "value": "Food%20%26%20Dining,Transport,Shopping,Utilities,Entertainment,Health,Education,Other"
+                }
+              ]
+            }
+          },
+          "response": []
         }
       ]
     },
@@ -899,7 +1081,7 @@
         "header": [],
         "body": {
           "mode": "raw",
-          "raw": "{\n    \"client_id\": \"{{clientId}}\",\n    \"client_secret\": \"{{clientSecret}}\",\n    \"grant_type\": \"client_credentials\",\n    \"scope\": \"client.balance document.expense document.text document.identity language.detect language.translate pii.detect pii.redact scraper.markdown text.sentiment text.summarize image.list speech.transcribe image.calories text.calories text.classify text.expenses\"\n}",
+          "raw": "{\n    \"client_id\": \"{{clientId}}\",\n    \"client_secret\": \"{{clientSecret}}\",\n    \"grant_type\": \"client_credentials\",\n    \"scope\": \"client.balance document.expense document.text document.identity language.detect language.translate pii.detect pii.redact scraper.markdown text.sentiment text.summarize image.list speech.transcribe image.calories text.calories text.classify text.expenses text.todos\"\n}",
           "options": {
             "raw": {
               "language": "json"
